@@ -23,7 +23,7 @@
           <div class="d-flex flex-column">
             <div class="p-5 bg-dark text-white">
               <div class="name d-flex flex-row justify-content-between align-items-center">
-                <h1 class="display-4">Marko Jovanović</h1>
+                <h1 class="display-4 output"></h1>
 
               </div>
             </div>
@@ -72,11 +72,11 @@
         <hr>
         <h4>HTML</h4>
         <div class="progress mb-3">
-          <div class="progress-bar bg-success" style="width:86%"></div>
+          <div class="progress-bar bg-success" style="width:84%"></div>
         </div>
-        <h4>CSS</h4>
+        <h4>CSS \ SASS</h4>
         <div class="progress mb-3">
-          <div class="progress-bar bg-success" style="width:61%"></div>
+          <div class="progress-bar bg-success" style="width:60%"></div>
         </div>
         <h4>JavaScript ES6</h4>
         <div class="progress mb-3">
@@ -84,19 +84,27 @@
         </div>
         <h4>Materalize.CSS</h4>
         <div class="progress mb-3">
-          <div class="progress-bar bg-success" style="width:59%"></div>
+          <div class="progress-bar bg-success" style="width:65%"></div>
         </div>
         <h4>Bootstrap</h4>
         <div class="progress mb-3">
-          <div class="progress-bar bg-success" style="width:52%"></div>
+          <div class="progress-bar bg-success" style="width:60%"></div>
         </div>
-        <h4>Node.JS</h4>
+        <h4>Node.JS Express MongoDB</h4>
         <div class="progress mb-3">
-          <div class="progress-bar bg-success" style="width:9%"></div>
+          <div class="progress-bar bg-success" style="width:15%"></div>
         </div>
-        <h4>Adobe Illustrator</h4>
+        <h4>SEO Optimization</h4>
         <div class="progress mb-3">
-          <div class="progress-bar bg-success" style="width:8%"></div>
+          <div class="progress-bar bg-success" style="width:15%"></div>
+        </div>
+        <h4>GIT</h4>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-warning" style="width:70%"></div>
+        </div>
+        <h4>Visual Studio Code</h4>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-warning" style="width:70%"></div>
         </div>
       </div>
     </div>
@@ -108,7 +116,7 @@
       </div>
       <div class="card card-body py-5">
         <h3>Obrazovanje</h3>
-        <p>Diplomirani ekonomista.<br> ITAcademy: "PHP development"(2018), <i><small> žali bože bačene pare...</small></i></p><br>
+        <p>Diplomirani ekonomista.<br> ITAcademy: "PHP development"(2018), <i><small> umesto kodiranja često rešavaš testove...</small></i></p><br>
         <h3>Radno Mesto</h3><br>
         <div class="card-deck py-2">
           <div class="card">
@@ -221,7 +229,7 @@
       </div>
 
       <div class="card card-body py-5">
-        <h3 class="display-4 mb-3 py-1">PROJEKTI</h3>
+        <h4 class="display-5 mb-3 py-1">PROJEKTI</h4>
         <p class=" lead py-4">Tekstovi u projektima su moji, samo jedan mali deo je preuzet sa Interneta. Jednostavno i brzo pišem tekstove. Prosto bi bilo dosadno i generično napraviti projekte sa Lorem Ipsum tekstovima, bez validne priče. Mnoge slike su optimizovane, u nekim projektima code je minimiziran, radi bolje produkcije na serveru. Projekti su testirani samo u Google Chrome-u i nisu prilagođeni za extra large screen. Svi projekti su Media Responsive</p>
         <div class="row py-2">
           <div class="col-md-5">
@@ -463,6 +471,8 @@ newMessegeRef.set({
     }, 3000); 
 }
 
+
+      // Form validation
      
        let cardImg = document.querySelector('.card-image');
        let name = document.querySelector('#name');
@@ -474,9 +484,9 @@ newMessegeRef.set({
 
           cardImg.style.opacity = 0.9;
           document.getElementById('contactForm').style.color='red';
-          name.style.fontWeight = "800";
-          email.style.fontWeight = "800";
-          message.style.fontWeight = "800"; 
+          name.style.fontWeight = "500";
+          email.style.fontWeight = "500";
+          message.style.fontWeight = "500"; 
         }
 
         // Collapsing fields 
@@ -489,6 +499,24 @@ newMessegeRef.set({
         event.preventDefault();
         $(this).ekkoLightbox();
       });
+      
+
+
+// Set up Marko Jovanovic name
+
+let output = document.querySelector('.output')
+let title = 'Marko Jovanović';
+let displayName = title.split('');
+let loop;
+
+function display(){
+  if(displayName.length > 0){
+    output.innerHTML += displayName.shift();
+    loop = setTimeout(display, 240)
+  }
+}
+  display()
+
 
     </script>
 </body>

@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "\"Drugarice i drugovi\"",
   "main": "index.js",
+  "homepage":"https://marcojovanovic.github.io/portfolio",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy":"gh-pages -d dist"
   },
   "author": "\"Marco Jovanovic\"",
   "license": "ISC"
